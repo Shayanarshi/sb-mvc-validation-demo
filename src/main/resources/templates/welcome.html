@@ -1,0 +1,148 @@
+<!--
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Page</title>
+</head>
+<body>
+<p th:text = "${message}"></p>
+<a href="/"> click here </a> to register another user.
+</body>
+</html>-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ecfdf5, #eff6ff);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #1e293b;
+        }
+
+        .success-card {
+            background: white;
+            width: 100%;
+            max-width: 480px;
+            padding: 45px 35px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 12px 35px rgba(30, 41, 59, 0.10);
+        }
+
+        .success-icon {
+            width: 85px;
+            height: 85px;
+            margin: 0 auto 25px;
+            border-radius: 50%;
+            background: #dcfce7;
+            color: #15803d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 45px;
+        }
+
+        h1 {
+            color: #166534;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .message {
+            color: #475569;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .success-label {
+            display: inline-block;
+            background: #dcfce7;
+            color: #166534;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .register-btn {
+            display: inline-block;
+            background: #4f46e5;
+            color: white;
+            text-decoration: none;
+            padding: 14px 25px;
+            border-radius: 9px;
+            font-size: 15px;
+            font-weight: 600;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .register-btn:hover {
+            background: #4338ca;
+            transform: translateY(-1px);
+        }
+
+        .footer {
+            margin-top: 30px;
+            color: #94a3b8;
+            font-size: 12px;
+        }
+
+        @media (max-width: 480px) {
+            .success-card {
+                padding: 35px 22px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="success-card">
+
+    <div class="success-icon" aria-hidden="true">&#10003;</div>
+
+    <span class="success-label">Registration Complete</span>
+
+    <h1>You're All Set!</h1>
+
+    <p class="message" th:text="${message}">
+        User registration success
+    </p>
+
+    <a th:href="@{/}" class="register-btn">
+        Register Another User &#8594;
+    </a>
+
+    <div class="footer">
+        Thank you for registering with us.
+    </div>
+
+</div>
+</body>
+</html>
+
